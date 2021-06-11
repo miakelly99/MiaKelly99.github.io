@@ -1,0 +1,25 @@
+.header {
+    background-color: #02DFD7;
+    height: 400px;
+    width: 95%;
+}
+.header table {
+    height: 100%;
+    width: 100%;
+    max-height: height;
+    max-width: width;
+}
+.header p {
+    font-size: 24px;
+}
+.header td {
+    vertical-align: top;
+}
+.header img {
+    height: 380px;
+    width: auto;
+    margin: 5px;
+}
+.table_picture {
+    width: 20%;
+}
