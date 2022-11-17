@@ -28,3 +28,7 @@ body {
 .section p {
     text-indent: 25px;
 }
+
+.bibtex_button {
+    background-color: white;
+}

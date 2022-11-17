@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/homepage_styles.css">
+    <script src="scripts/copy_bibtex.js"></script>
 </head>
 <body>
-
     <div class="header">
+        <title>Benjamin Kelly's Homepage</title>
         <table>
             <tbody>
                 <tr>
@@ -55,75 +56,44 @@
                         </div>
                         <ul>
                             <li>
-                                <b> Crowdsourcing Perceptions of Gerrymandering </b>
+                                <b> Crowdsourcing Perceptions of Gerrymandering <a href="https://ojs.aaai.org/index.php/HCOMP/article/view/21993">[Paper]</a> </b>
                                 <ul>
                                     <li>
-                                        Working with <a href="https://www.cs.rpi.edu/~xial/">Dr. Lirong Xia</a> and Inwon Kang, I investigated how we can model
-                                        and predict voter perceptions of gerrymandering. We crowdsourced data on how people perceived gerrymandering by asking them to choose which
-                                        of two possible district maps they believed was more fair. Using this data, we determined which features of districts are most important
-                                        to people when making their decisions. Additionally, we performed some preliminary work on using machine learning techniques to predict
-                                        preceptions for districts.
+                                        Working with <a href="https://www.cs.rpi.edu/~xial/">Dr. Lirong Xia</a> and Inwon Kang
                                     </li>
                                     <li>
-                                        This work has been accepted at <a href="https://www.humancomputation.com/">HCOMP 2022</a> and will be presented in November at the conference.
+                                        This work was presented at <a href="https://www.humancomputation.com/">HCOMP 2022</a>.
+                                    </li>
+                                    <li>
+                                        Kelly, Benjamin, Inwon Kang, and Lirong Xia. "Crowdsourcing Perceptions of Gerrymandering." Proceedings of the AAAI Conference on Human Computation and Crowdsourcing. Vol. 10. No. 1. 2022.
+                                    </li>
+                                    <li>
+                                        <button class="bibtex_button" onclick="copyBibTex(getBibTex('kelly2022crosdsourcing'))">Copy BibTex</button>
                                     </li>
                                 </ul>
                             </li>
+                            <hr/>
                             <li>
                                 <b> Gerrymandering under Uncertain Preferences <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21626">[Student Abstract]</a>  <a href="papers/gerrymandering_poster.pdf">[Poster]</a> </b>
                                 <ul>
                                     <li>
-                                        Begun as a project in Professor Lirong Xia's Economics and Computation class, this project investigated
-                                        the problem of gerrymandering as a graph problem. Existing definitions of gerrymandering assumed voters
-                                        have known, fixed preferences, which does not necessarily reflect the way people vote. How does the
-                                        inclusion of probabilistic voter preferences affect the complexity of gerrymandering, and can we make
-                                        and efficient algorithm to approximate solutions?
+                                        This work was a student abstract and poster at <a href="https://aaai.org/Conferences/AAAI-22/#">AAAI 2021</a>
                                     </li>
                                     <li>
-                                        I looked into existing literature and identified the above research question, and worked on both the theoretical
-                                        complexity increase caused by considering uncertain voter preferences. I also produced a greedy algorithm
-                                        to approximate solutions to the problem, and experimentally showed its success and limitations.
+                                        Kelly, Benjamin. "Gerrymandering under Uncertain Preferences (Student Abstract)." (2022).
                                     </li>
                                     <li>
-                                        After the class, I worked with Professor Xia to revise the original paper I wrote into a student abstract,
-                                        which was submitted to the AAAI-2022 conference.
+                                        <button class="bibtex_button" onclick="copyBibTex(getBibTex('kelly2022gerrymandering'))">Copy BibTex</button>
                                     </li>
                                 </ul>
                             </li>
+                            <hr/>
                             <li>
                                 <a href="https://idea.rpi.edu/research/projects/science-blockchain"> <b> SCIENCE with Blockchain </b> </a>
-                                <ul>
-                                    <li>
-                                        The SCIENCE with Blockchain project is an investigation within RPI's IDEA Center on using blockchain
-                                        and semantic web technologies to build a system capable of faciliating biomedical research data sharing agreements.
-                                    </li>
-                                    <li>
-                                        I joined at the start of the project and was responsible for investigating existing work on frameworks for
-                                        semantic web techonologies and their intersection with blockchain technologies. I also was responsible for designing
-                                        the SCIENCE ontology that would be the backbone of the system.
-                                    </li>
-                                    <li>
-                                        Finally, I worked to investigate how we can automatically convert ontologies into smart contracts, capable of fully
-                                        representing the data sharing agreements commonly used in the biomedical research cycle.
-                                    </li>
-                                </ul>
                             </li>
+                            <hr/>
                             <li>
                                 <a href="https://idea.rpi.edu/research/projects/heals"> <b> HEALS Project </b> </a>
-                                <ul>
-                                    <li>
-                                        The HEALS project is a collaboration between RPI and IBM within RPI's IDEA Center on using semantic web technologies
-                                        and autonomic reasoners to help physicians decide treatment plans for patients with type 2 diabetes.
-                                    </li>
-                                    <li>
-                                        I joined the project as a developer for a web interface that wolid display the output of the reasoner, both the decision
-                                        and the reasoning for that decision.
-                                    </li>
-                                    <li>
-                                        My worked used standard web development tools like HTML, CSS, and Javascript, as well as ontological languages like
-                                        RDF formatted data and SPARQL to query the RDF database.
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -134,3 +104,21 @@
 
 </body>
 </html>
+
+<script>
+    function getBibTex(ref_name)
+    {
+        const bibtex_values = new Map([
+            [
+                "kelly2022gerrymandering",
+                "@article{kelly2022gerrymandering,\n\ttitle={Gerrymandering under Uncertain Preferences (Student Abstract)},\n\tauthor={Kelly, Benjamin},\n\tyear={2022}\n}"
+            ],
+            [
+                "kelly2022crosdsourcing",
+                "@inproceedings{kelly2022crowdsourcing,\n\ttitle={Crowdsourcing Perceptions of Gerrymandering},\n\tauthor={Kelly, Benjamin and Kang, Inwon and Xia, Lirong},\n\tbooktitle={Proceedings of the AAAI Conference on Human Computation and Crowdsourcing},\n\tvolume={10},\n\tnumber={1},\n\tpages={124--132},\n\tyear={2022}\n}"
+            ],
+        ]);
+
+        return bibtex_values.get(ref_name);
+    }
+</script>
